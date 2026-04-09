@@ -52,13 +52,13 @@ window.addEventListener("scroll", function () {
 
 
 
-const toggles = document.querySelectorAll('.faq-toggle')
+const faqs = document.querySelectorAll('.faq');
 
-toggles.forEach((toggle) => {
-    toggle.addEventListener('click', () => {
-        toggle.parentNode.classList.toggle('active')
-    })
-})
+faqs.forEach((faq) => {
+  faq.addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
+});
 
 
 
