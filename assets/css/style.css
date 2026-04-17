@@ -320,8 +320,15 @@ button, a { transition: var(--transition); }
 
 .header-top-link ion-icon {
   color: var(--orange-soda);
-  font-size: 15px;
+  font-size: 18px;
   --ionicon-stroke-width: 60px;
+}
+
+@media (max-width: 500px) {
+  .header-top-link span,
+  .header-top-link address { display: none; }
+  .header-top-list { gap: 20px; }
+  .header-top .container { gap: 10px; }
 }
 
 .header-top .wrapper,
@@ -421,16 +428,18 @@ width: 50px; }
 }
 
 .header-bottom-actions {
-  background: var(--white);
+  background: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(10px);
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding-block: 15px 10px;
-  box-shadow: -2px 0 30px hsla(237, 71%, 52%, 0.2);
-  z-index: 3;
+  padding-block: 10px;
+  box-shadow: 0 -2px 20px hsla(0, 0%, 0%, 0.1);
+  z-index: 10;
+  border-top: 1px solid hsla(0, 0%, 0%, 0.05);
 }
 
 .header-bottom-actions-btn ion-icon {
